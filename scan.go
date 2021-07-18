@@ -20,10 +20,10 @@ func nextInt() int {
 
 func main() {
     sc.Split(bufio.ScanWords)
+    n := nextInt()
     x := make([]int, n)
-    x := 0
     for i := 0; i < n; i++ {
         x[i] = nextInt()
     }
-    fmt.Println(x)
+    fmt.Printf("%d", x)
 }
