@@ -7,3 +7,15 @@ for _, ele := range array {
     uniq = append(uniq, ele)
   }
 }
+
+// 空のstructを使うパターン
+m := make(map[int]struct{})
+
+for _, ele := range arr {
+  m[ele] = struct{}{} // m["a"] = struct{}{} が二度目は同じものとみなされて重複が消える。
+}
+
+uniq := [] int{}
+for i := range m {
+  uniq := append(uniq, i)
+}
