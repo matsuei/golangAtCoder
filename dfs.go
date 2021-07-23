@@ -71,6 +71,6 @@ func main() {
 		ans += dfs(nodes[i])
 		reset(nodes)
 	}
-	fmt.Println(ans)
+    fmt.Println(ans)
 }
 
