@@ -24,4 +24,14 @@ func main() {
   sort.Slice(people, func(i, j int) bool { 
     return Object[i].Index < Object[j].Index
   })
+  
+  x := 23
+  // firstIndexみたいな感じ
+  i := sort.Search(len(data), func(i int) bool { return data[i] >= x })
+  if i < len(data) && data[i] == x {
+    // x is present at data[i]
+  } else {
+    // x is not present in data,
+    // but i is the index where it would be inserted.
+  }
 }
