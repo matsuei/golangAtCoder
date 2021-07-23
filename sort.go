@@ -4,6 +4,10 @@ import (
   "fmt"
   "sort"
 )
+type Object struct {
+  Index string
+  Value  int
+}
 
 func main() {
   var n int
@@ -14,4 +18,10 @@ func main() {
   }
   sort.Sort(sort.IntSlice(x))
   sort.Sort(sort.Reverse(sort.IntSlice(x)))
+  
+  sort.Ints(index)
+  
+  sort.Slice(people, func(i, j int) bool { 
+    return Object[i].Index < Object[j].Index
+  })
 }
